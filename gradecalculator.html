@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+  </head>
+  <body>
+    <h1>Grade Calculator</h1>
+    <script>
+      // Prompt the user to enter marks for each subject
+      var mathMarks = parseFloat(prompt("Enter the marks for Mathematics:"));
+      var physicsMarks = parseFloat(prompt("Enter the marks for Physics:"));
+      var chemistryMarks = parseFloat(prompt("Enter the marks for Chemistry:"));
+
+      // Calculate the average
+      var average = (mathMarks + physicsMarks + chemistryMarks) / 3;
+
+      // Determine the grade based on the average
+      var grade;
+      if (average < 70) {
+        grade = "C grade";
+      } else if (average >= 70 && average < 90) {
+        grade = "B grade";
+      } else {
+        grade = "A grade";
+      }
+
+      // Display the results in the console
+      console.log("Average Marks: " + average.toFixed(2));
+      console.log("Grade: " + grade);
+    </script>
+  </body>
+</html>
